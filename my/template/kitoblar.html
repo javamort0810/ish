@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kitoblar</title>
+</head>
+<body>
+{% for i in kitoblar%}
+<h1><a href="/kitoblar/{{i.id}}/">{{i.id}} {{i.nom}} </a><a href="/delete-kitob/{{i.id}}"><button>Delete</button></a>></h1>
+{% endfor %}
+
+<form action="/add-kitob/" method="post"> {% csrf_token %}
+<input type="text" placeholder="Nomi"name="nom">
+<input type="number" placeholder="Sahifa"name="sahifa">
+<input type="date" placeholder="Yil"name="yil">
+<input type="text" placeholder="Janr"name="janr">
+<button type="sumbit">Create</button>
+</form>
+</body>
+</html>

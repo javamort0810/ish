@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Talaba</title>
+</head>
+<body>
+
+{% for i in Talabar%}
+<h1><a href="/bitta_talaba/{{i.id}}/">{{i.id}} {{i.ism}} </a><a href="/delete-student/{{i.id}}"><button>Delete</button></a></h1>
+{% endfor %}
+
+<form action="/add-talaba/" method="post"> {% csrf_token %}
+<input type="text" placeholder="Ismi" name="ism">
+<input type="number" placeholder="Yoshi"name="yosh">
+<input type="number" placeholder="Kursi"name="kurs">
+<button type="sumbit">Create</button>
+</form>
+</body>
+</html>

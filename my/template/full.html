@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Hamma narsa shedta bor</title>
+</head>
+<body>
+<h1>Talabalarni korishni</h1>
+<form action="/student/" method="post"> {% csrf_token %}
+  <button tupe="sumbit">Kirish</button>
+</form>
+<h1>Muoliflarni korishni</h1>
+<form action="/muolif/" method="post"> {% csrf_token %}
+  <button tupe="sumbit">Kirish</button>
+</form >
+<h1>Kitoblarni korishni</h1>
+<form action="/kitoblar/" method="post"> {% csrf_token %}>
+  <button tupe="sumbit">Kirish</button>
+</form>
+<h1>Records korishni</h1>
+<form action="/record/" method="post"> {% csrf_token %}>
+  <button tupe="sumbit">Kirish</button>
+</form>
+
+
+
+</body>
+</html>

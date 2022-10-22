@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Muolif</title>
+</head>
+<body>
+{% for i in yozuvchilar %}
+<h4> <a href="/muolif/{{i.id}}/">{{i.id}} {{i.ism}}</a><a href="/delete-muolif/{{i.id}}"><button>Delete</button></a></h4>
+{% endfor %}
+
+<form action="/add-muolif/" method="post"> {% csrf_token %}
+<input style="background-color:white" color="black"type="text" placeholder="Ismi" name="ism">
+<input style="background-color:white" color="black" type="bool" placeholder="tirik"name="tirik">
+<input style="background-color:white" color="black" type="number" placeholder="yili"name="tugilgan_yil">
+<input style="background-color:white" color="black" type="text" placeholder="Millati"name="millat">
+<button style="background-color:red" color="black" type="sumbit">Create</button>
+
+</form>
+</body>
+</html>
